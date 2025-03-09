@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../.."
+		},
+		{
+			"path": "../../../../../Myntra - mitul"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Myntra - mitul"
+	}
+}
