@@ -72,21 +72,21 @@ function Card() {
             <div className="card-header bg-warning text-white text-center fw-bold">
               ⏳ Pending Tasks
             </div>
-            <div className="card-body">
+            <div className="card-body border-warning">
               {todos.filter(todo => todo.status === "Pending").length === 0 ? (
                 <p className="text-center text-muted">No pending tasks</p>
               ) : (
                 todos
                   .filter(todo => todo.status === "Pending")
                   .map((todo) => (
-                    <div key={todo.id} className="alert alert-light d-flex justify-content-between align-items-center">
+                    <div key={todo.id} className="alert alert-light d-flex justify-content-between align-items-center me-2 ">
                       <span>{todo.text}</span>
-                      <div>
+                      <div className="d-flex align-items-center">
                         <button className="btn btn-sm btn-info me-2" onClick={() => changeStatus(todo.id, "In Progress")}>
-                          <FaPlay /> Start
+                          <FaPlay /> 
                         </button>
                         <button className="btn btn-sm btn-danger" onClick={() => deleteTodo(todo.id)}>
-                          <FaTrash /> Delete
+                          <FaTrash /> 
                         </button>
                       </div>
                     </div>
@@ -113,10 +113,10 @@ function Card() {
                       <span>{todo.text}</span>
                       <div>
                         <button className="btn btn-sm btn-success me-2" onClick={() => changeStatus(todo.id, "Completed")}>
-                          <FaCheck /> Complete
+                          <FaCheck /> 
                         </button>
                         <button className="btn btn-sm btn-danger" onClick={() => deleteTodo(todo.id)}>
-                          <FaTrash /> Delete
+                          <FaTrash /> 
                         </button>
                       </div>
                     </div>
@@ -142,7 +142,7 @@ function Card() {
                     <div key={todo.id} className="alert alert-light d-flex justify-content-between align-items-center">
                       <span className="text-decoration-line-through">{todo.text}</span>
                       <button className="btn btn-sm btn-danger" onClick={() => deleteTodo(todo.id)}>
-                        <FaTrash /> Delete
+                        <FaTrash /> 
                       </button>
                     </div>
                   ))
